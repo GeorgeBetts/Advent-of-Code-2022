@@ -13,4 +13,7 @@ foreach ($values as $value) {
     $elfCalories[$elfIndex] += $value;
 }
 
-echo max($elfCalories);
+sort($elfCalories);
+
+$maxIndex = count($elfCalories) - 1;
+echo $elfCalories[$maxIndex] + $elfCalories[$maxIndex - 1] + $elfCalories[$maxIndex - 2];
